@@ -17,3 +17,24 @@ More information:
 - [Community](http://community.humhub.com/)
 - [Licence](http://www.humhub.org/licences)
 
+## Itsyou.online Integration
+
+Add the following section into `protected/config/common.php`
+
+```php
+return [
+    'components' => [
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            'clients' => [
+                'itsyouonline' => [
+                    'class' => 'humhub\modules\user\authclient\IYO',
+                    'clientId' => 'CLIENT_ID',
+                    'clientSecret' => 'CLIENT_SECRET',
+                ],
+            ],
+        ]  
+    ]
+];
+```
+
