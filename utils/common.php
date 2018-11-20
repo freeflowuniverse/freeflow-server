@@ -11,8 +11,8 @@ return [
             'clients' => [
                 'itsyouonline' => [
                     'class' => 'humhub\modules\user\authclient\IYO',
-                    'clientId' => getenv('CLIENT_ID');
-                    'clientSecret' => getenv('CLIENT_SECRET'), 
+                    'clientId' => getenv('CLIENT_ID'),
+                    'clientSecret' => getenv('CLIENT_SECRET'),
                 ],
             ],
         ]
