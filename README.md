@@ -25,12 +25,11 @@ Add the following section into `protected/config/common.php`
 return [
     'components' => [
         'authClientCollection' => [
-            'class' => 'yii\authclient\Collection',
             'clients' => [
                 'itsyouonline' => [
                     'class' => 'humhub\modules\user\authclient\IYO',
-                    'clientId' => 'CLIENT_ID',
-                    'clientSecret' => 'CLIENT_SECRET',
+                    'clientId' => getenv('CLIENT_ID');
+                    'clientSecret' => getenv('CLIENT_SECRET'),
                 ],
             ],
         ]  
