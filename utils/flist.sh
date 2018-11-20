@@ -3,6 +3,7 @@ set -ex
 
 export DEBIAN_FRONTEND=noninteractive
 
+apt-get update
 apt-get install lamp-server^ -y
 apt-get install php-curl php-gd php-mbstring -y
 apt-get install php-intl php-zip wget -y
