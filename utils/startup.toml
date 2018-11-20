@@ -1,0 +1,23 @@
+[startup.humhub]
+name = "bash"
+protected = true #set protected to true to respawn the container if it crashed
+
+[startup.humhub.args]
+script = """
+sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+    locale-gen
+export HOME=/root
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+chmod -R 775 /var/www/
+chmod 400 -R /etc/ssh/
+chown -R www-data:www-data /var/www/
+chown -R mysql /var/lib/mysql/
+chown -R mysql /var/log/mysql/
+chown -R mysql /var/run/mysqld/
+/etc/init.d/mysql start
+./etc/init.d/apache2 start
+service cron start
+crontab /root/mycron
+"""
