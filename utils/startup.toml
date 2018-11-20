@@ -11,8 +11,10 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 chmod -R 775 /var/www/
+
 chmod 400 -R /etc/ssh/
 chown -R www-data:www-data /var/www/
+
 chown -R mysql /var/lib/mysql/
 chown -R mysql /var/log/mysql/
 chown -R mysql /var/run/mysqld/
