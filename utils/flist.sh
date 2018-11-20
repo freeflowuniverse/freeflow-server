@@ -8,7 +8,7 @@ apt-get install lamp-server^ -y
 apt-get install php-curl php-gd php-mbstring -y
 apt-get install php-intl php-zip wget -y
 apt-get install php-ldap php-apcu php-sqlite3 -y
-apt-get install cron
+apt-get install cron ssh
 
 cd /var/www/html
 
