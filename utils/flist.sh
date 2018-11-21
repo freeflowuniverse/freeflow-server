@@ -17,8 +17,6 @@ wget https://www.humhub.org/en/download/package/humhub-1.3.7.tar.gz
 tar xvf humhub-1.3.7.tar.gz
 mv humhub-1.3.7 humhub
 
-chown -R www-data:www-data /var/www/
-chmod -R 775 /var/www/
 chmod 400 -R /etc/ssh/
 
 service apache2 restart
@@ -33,5 +31,8 @@ wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/mycro
 wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/startup.toml -O /.startup.toml
 wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/IYO.php -O /var/www/html/humhub/protected/humhub/modules/user/authclient/IYO.php
 wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/common.php -O /var/www/html/humhub/protected/config/common.php
+
+chmod -R 775 /var/www/
+chown -R www-data:www-data /var/www/
 
 tar -cpzf "/root/archives/humhub.tar.gz" --exclude dev --exclude sys --exclude proc  /
