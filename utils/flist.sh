@@ -28,9 +28,10 @@ mysql -e "CREATE DATABASE humhub CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_c
 mysql -e "GRANT ALL ON humhub.* TO 'humhub'@'localhost' IDENTIFIED BY 'OshotsAg5';"
 mysql -e "FLUSH PRIVILEGES;"
 
-cp utils/mycron /root/mycron
-cp utils/startup.toml /.startup.toml
-cp utils/IYO.php /var/www/html/humhub/protected/humhub/modules/user/authclient/IYO.php
-cp utils/common.php /var/www/html/humhub/protected/config/common.php
+
+wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/mycron -O /root/mycron
+wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/startup.toml -O /.startup.toml
+wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/IYO.php -O /var/www/html/humhub/protected/humhub/modules/user/authclient/IYO.php
+wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/common.php -O /var/www/html/humhub/protected/config/common.php
 
 tar -cpzf "/root/archives/humhub.tar.gz" --exclude dev --exclude sys --exclude proc  /
