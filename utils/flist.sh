@@ -28,7 +28,7 @@ mysql -e "FLUSH PRIVILEGES;"
 
 
 wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/mycron -O /root/mycron
-#wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/startup.toml -O /.startup.toml
+wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/startup.toml -O /.startup.toml
 wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/IYO.php -O /var/www/html/humhub/protected/humhub/modules/user/authclient/IYO.php
 wget https://raw.githubusercontent.com/threefoldgrid/freeflow/master/utils/common.php -O /var/www/html/humhub/protected/config/common.php
 
