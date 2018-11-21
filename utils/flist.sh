@@ -21,8 +21,8 @@ chown -R www-data:www-data /var/www/
 chmod -R 775 /var/www/
 chmod 400 -R /etc/ssh/
 
-./etc/init.d/apache2 restart
-/etc/init.d/mysql start
+service apache2 restart
+service mysql start
 
 mysql -e "CREATE DATABASE humhub CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 mysql -e "GRANT ALL ON humhub.* TO 'humhub'@'localhost' IDENTIFIED BY 'OshotsAg5';"
