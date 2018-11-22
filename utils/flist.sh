@@ -23,7 +23,7 @@ service apache2 restart
 service mysql start
 
 mysql -e "CREATE DATABASE humhub CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
-mysql -e "GRANT ALL ON humhub.* TO 'humhub'@'localhost' IDENTIFIED BY 'OshotsAg5';"
+mysql -e "GRANT ALL ON humhub.* TO 'humhub'@'localhost' IDENTIFIED BY 'Hum_flist_hubB';"
 mysql -e "FLUSH PRIVILEGES;"
 
 

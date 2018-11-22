@@ -56,6 +56,6 @@ chown -R mysql /var/lib/mysql/
 chown -R mysql /var/log/mysql/
 chown -R mysql /var/run/mysqld/
 
-# service cron start
-# crontab /root/mycron
+service cron start
+crontab /root/mycron
 """
