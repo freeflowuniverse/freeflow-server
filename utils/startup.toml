@@ -55,6 +55,4 @@ chown -R www-data:www-data /var/www/
 chown -R mysql /var/lib/mysql/
 chown -R mysql /var/log/mysql/
 chown -R mysql /var/run/mysqld/
-
-
 """
