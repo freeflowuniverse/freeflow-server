@@ -43,7 +43,7 @@ return [
  robot = j.clients.zrobot.robots['local']
 ```
 - creating the container with the latest flist :-
-  - Humhub flist available [here](https://build.grid.tf/)
+  - FreeFlow flist available [here](https://hub.grid.tf/tf-autobuilder)
   ```
   container_data = {
     'flist': 'https://hub.grid.tf/tf-autobuilder/threefoldtech-0-db-release-development.flist',
