@@ -50,6 +50,8 @@ export LC_ALL=en_US.UTF-8
 chmod -R 775 /var/www/
 
 chmod 400 -R /etc/ssh/
+mkdir /root/.ssh
+/etc/init.d/ssh start
 chown -R www-data:www-data /var/www/
 
 chown -R mysql /var/lib/mysql/
